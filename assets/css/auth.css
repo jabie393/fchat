@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #47cbfc;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --light-gray: #e9ecef;
+  --dark-gray: #adb5bd;
+  --white: #ffffff;
+  --danger-color: #dc3545;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+a,
+button {
+  text-decoration: none!important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Menghilangkan highlight pada elemen saat di-tap di Chrome */
+  -moz-tap-highlight-color: none; /* Firefox */
+  -ms-tap-highlight-color: none; /* Internet Explorer/Edge */
+}
+
+.auth-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.auth-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-radius: 25px;
+  padding: 12px 20px;
+  border: 1px solid var(--light-gray);
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(71, 203, 252, 0.25);
+}
+
+.btn-auth {
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #3ab4e0;
+  transform: translateY(-2px);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--dark-gray);
+}
+
+.auth-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--danger-color);
+  border-radius: 25px;
+  border: none;
+}
