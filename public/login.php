@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header('Location: main.php');
+        header('Location: main');
         exit();
     } else {
         $error = "Username atau password salah!";
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <i class='bx bx-log-in'></i> Login
             </button>
             <p class="auth-footer">
-                Don't have an account? <a href="register.php" class="auth-link">Register here</a>
+                Don't have an account? <a href="register" class="auth-link">Register here</a>
             </p>
         </form>
     </div>

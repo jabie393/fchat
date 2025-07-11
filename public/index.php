@@ -39,17 +39,17 @@ $isLoggedIn = isset($_SESSION['user_id']);
 
             <div class="text-center">
                 <?php if ($isLoggedIn): ?>
-                    <a href="main.php" class="btn-action btn-primary">
+                    <a href="main" class="btn-action btn-primary">
                         <i class='bx bx-chat btn-icon'></i> Go to Chat
                     </a>
-                    <a href="logout.php" class="btn-action btn-danger">
+                    <a href="logout" class="btn-action btn-danger">
                         <i class='bx bx-log-out btn-icon'></i> Logout
                     </a>
                 <?php else: ?>
-                    <a href="login.php" class="btn-action btn-success">
+                    <a href="login" class="btn-action btn-success">
                         <i class='bx bx-log-in btn-icon'></i> Login
                     </a>
-                    <a href="register.php" class="btn-action btn-info">
+                    <a href="register" class="btn-action btn-info">
                         <i class='bx bx-user-plus btn-icon'></i> Register
                     </a>
                 <?php endif; ?>

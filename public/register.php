@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($stmt->execute()) {
                 $_SESSION['user_id'] = $stmt->insert_id;
                 $_SESSION['username'] = $username;
-                header("Location: main.php");
+                header("Location: main");
                 exit();
             } else {
                 $error = "Registration failed. Please try again.";
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <i class='bx bx-user-plus'></i> Register
             </button>
             <p class="auth-footer">
-                Already have an account? <a href="login.php" class="auth-link">Login here</a>
+                Already have an account? <a href="login" class="auth-link">Login here</a>
             </p>
         </form>
     </div>
