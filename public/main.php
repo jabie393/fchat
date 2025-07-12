@@ -44,6 +44,7 @@ while ($row = $result->fetch_assoc()) {
     <div class="app-container">
         <div class="header">
             <div class="header-content">
+                <a href="../index"><i class='bx bx-arrow-back'></i></a>
                 <div class="greeting">Hi <b><?= htmlspecialchars($_SESSION['username'] ?? '') ?></b> 👋</div>
                 <select id="receiverSelect" class="form-control user-select">
                     <option value="">Select User</option>
@@ -75,8 +76,12 @@ while ($row = $result->fetch_assoc()) {
 
     <script>
         const user_id = <?= json_encode($user_id) ?>;
+        window.addEventListener('popstate', function(event) {
+            window.location.href = '../index';
+        });
     </script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/back.js"></script>
 
 </body>
 

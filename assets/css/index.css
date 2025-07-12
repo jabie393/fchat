@@ -1,7 +1,7 @@
 a,
 button {
   text-decoration: none !important;
-  outline: none;
+  outline: none!important;
   -webkit-tap-highlight-color: transparent; /* Menghilangkan highlight pada elemen saat di-tap di Chrome */
   -moz-tap-highlight-color: none; /* Firefox */
   -ms-tap-highlight-color: none; /* Internet Explorer/Edge */
@@ -55,6 +55,12 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
+}
+
+.greeting {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .app-description {
