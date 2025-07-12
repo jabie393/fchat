@@ -240,8 +240,8 @@ button {
 
 /* Dropdown menu */
 .select2-container--default .select2-dropdown {
-  border-radius: 0 0 16px 16px;
   border: 1.5px solid #007bff;
+  border-top: none;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   background: #fff;
 }
