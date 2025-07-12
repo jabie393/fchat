@@ -13,7 +13,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PHP Chat App</title>
+    <title>MyChat</title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -29,7 +29,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <body>
     <div class="app-container">
         <div class="hero-section">
-            <h1 class="app-title">PHP Chat App <i class='bx bx-chat'></i></h1>
+            <h1 class="app-title">MyChat <i class='bx bx-chat'></i></h1>
 
             <?php if ($isLoggedIn): ?>
                 <div class="greeting">Hi <b><?= htmlspecialchars($_SESSION['username'] ?? '') ?></b> 👋</div>
@@ -82,7 +82,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
     </div>
 
     <footer>
-        <p class="footer-text">© <?php echo date('Y'); ?> PHP Chat App. All rights reserved.</p>
+        <p class="footer-text">© <?php echo date('Y'); ?> MyChat. All rights reserved.</p>
     </footer>
 
 </body>
