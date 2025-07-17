@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jul 2025 pada 08.13
+-- Waktu pembuatan: 17 Jul 2025 pada 05.03
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `chat_web`
+-- Database: `fchat`
 --
 
 -- --------------------------------------------------------
@@ -37,14 +37,6 @@ CREATE TABLE `messages` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `messages`
---
-
-INSERT INTO `messages` (`id`, `sender_id`, `receiver_id`, `room_id`, `message`, `is_read`, `created_at`) VALUES
-(1, 1, 1, 'user_1_admin_1', 'halo min', 0, '2025-07-10 12:00:17'),
-(2, 2, 1, 'user_2_admin_1', 'hey', 0, '2025-07-10 12:05:00');
-
 -- --------------------------------------------------------
 
 --
@@ -59,15 +51,6 @@ CREATE TABLE `users` (
   `role` enum('user','admin') DEFAULT 'user',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`) VALUES
-(1, 'aku', 'aku@gmail.com', '$2y$10$WQpXYoEVUFfqkzqEa2uB9e/t8ZKj.cB/E7M8Mz0KZ8deXlDYzMt9i', 'user', '2025-07-10 12:00:06'),
-(2, 'admin', 'admin@gmail.com', '$2y$10$zSIBCrL7omvvezLx2aJX4OBMsTV2XTpW2g1/pR4zVZD1Rh8lfELbK', 'admin', '2025-07-10 12:01:12'),
-(5, 'dia', 'dia@gmail.com', '$2y$10$paZnUnyr772ru6ZM/Zd0OeOWSMce0pXfBAUBM.Kq3wIiYs8d9SX1a', 'user', '2025-07-11 06:10:04');
 
 --
 -- Indexes for dumped tables
@@ -96,13 +79,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

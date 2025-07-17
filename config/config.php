@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost'; // Database host
-$db_name = 'chat_web'; // Database name
+$db_name = 'fchat'; // Database name
 $username = 'root'; // Database username
 $password = ''; // Database password
 
